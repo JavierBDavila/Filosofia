@@ -1,0 +1,578 @@
+/* Estilo general inspirado en Red Dead Redemption 2 - Versión Mejorada */
+:root {
+  --primary-dark: #3a1d0f;
+  --primary-red: #8b0000;
+  --primary-red-hover: #b22222;
+  --secondary-gold: #d4af37;
+  --secondary-gold-light: #f0e6c2;
+  --bg-dark: #1a1a1a;
+  --bg-light: #2e2e2e;
+  --text-primary: #e0d2b4;
+  --text-secondary: #b8a988;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, var(--primary-dark), var(--bg-dark));
+  color: var(--text-primary);
+  min-height: 100vh;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, var(--primary-dark), var(--primary-red));
+  color: var(--secondary-gold-light);
+  text-align: center;
+  padding: 3rem 1rem;
+  border-bottom: 3px solid var(--secondary-gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+header p {
+  font-style: italic;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background-color: rgba(26, 26, 26, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  color: var(--secondary-gold);
+  border-bottom: 2px solid var(--primary-red);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+/* Slider mejorado */
+.slide-container {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border: 3px solid var(--secondary-gold);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide.active {
+  display: block;
+  animation: fade 1.5s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0.6; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(139, 0, 0, 0.7);
+  border: 2px solid var(--secondary-gold);
+  color: var(--secondary-gold-light);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.slide-btn:hover {
+  background-color: rgba(178, 34, 34, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slide-btn.prev {
+  left: 20px;
+}
+
+.slide-btn.next {
+  right: 20px;
+}
+
+/* Botones mejorados */
+button {
+  background: linear-gradient(to bottom, var(--primary-red), var(--primary-dark));
+  color: var(--secondary-gold-light);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem 0;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, var(--primary-red-hover), #5a2d18);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes y galería */
+#imgExtra img, #imgCristiana img {
+  max-width: 100%;
+  margin-top: 1.5rem;
+  border: 3px solid var(--secondary-gold);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#imgExtra img:hover, #imgCristiana img:hover {
+  transform: scale(1.02);
+}
+
+.hidden {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Sección religión mejorada */
+.religion {
+  background: linear-gradient(to bottom, #f8f4e8, #e8e0c0) !important;
+  color: #3a1d0f !important;
+  padding: 2.5rem !important;
+  border: 2px solid var(--secondary-gold) !important;
+}
+
+.religion h2 {
+  color: #8b0000 !important;
+}
+
+/* Footer mejorado */
+footer {
+  text-align: center;
+  background: linear-gradient(to right, var(--primary-dark), #000);
+  color: var(--text-secondary);
+  padding: 1.5rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--secondary-gold);
+}
+
+blockquote {
+  font-style: italic;
+  text-align: center;
+  border-left: 5px solid var(--secondary-gold);
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 600px;
+  background-color: rgba(26, 26, 26, 0.5);
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+blockquote::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--secondary-gold);
+  opacity: 0.3;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+blockquote::after {
+  content: '"';
+  font-size: 4rem;
+  color: var(--secondary-gold);
+  opacity: 0.3;
+  position: absolute;
+  right: 10px;
+  bottom: -30px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+  
+  .slide-container {
+    max-width: 100%;
+  }
+}
+/* Estilos para el botón de explorar */
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(to right, #8b0000, #5a2d18);
+  color: #f0e6c2;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 1rem 0;
+}
+
+.explore-btn:hover {
+  background: linear-gradient(to right, #a30000, #7a3d24);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.explore-btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* Estilos para versículos bíblicos */
+.bible-verses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.verse-card {
+  background: rgba(58, 29, 15, 0.8); /* Fondo más oscuro y cálido */
+  border-left: 4px solid var(--secondary-gold);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.verse-card:hover {
+  transform: translateY(-5px);
+  background: rgba(70, 35, 15, 0.9); /* Tonos más cálidos al hacer hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.verse-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f8f3e6; /* Color más claro y cálido para mejor contraste */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.verse-ref {
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--secondary-gold); /* Usamos el dorado para la referencia */
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Ajustes para la sección religión */
+.religion {
+  background: linear-gradient(to bottom, #f8f4e8, #e8e0c0) !important;
+  color: #3a1d0f !important;
+}
+
+.religion h2, .religion h3 {
+  color: #8b0000 !important;
+  text-shadow: none;
+}
+
+.religion .verse-card {
+  background: rgba(139, 0, 0, 0.1); /* Fondo más claro en modo claro */
+  border-left: 4px solid #8b0000;
+}
+
+.religion .verse-text {
+  color: #3a1d0f; /* Texto oscuro para contraste en modo claro */
+  text-shadow: none;
+}
+
+.comparison-title {
+  text-align: center;
+  margin: 2.5rem 0 1.5rem;
+  color: var(--secondary-gold);
+  font-size: 1.5rem;
+}
+
+/* Mejora para las citas */
+blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: normal;
+}
+
+.image-caption {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+/* Estilos para el slider de símbolos cristianos */
+.symbols-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border: 3px solid #8b0000;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.symbol-slide {
+  display: none;
+  width: 100%;
+}
+
+.symbol-slide.active {
+  display: block;
+  animation: fade 1s ease;
+}
+
+.symbol-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-bottom: 3px solid #8b0000;
+}
+
+.symbol-caption {
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, #f8f4e8, #e8e0c0);
+  color: #3a1d0f;
+}
+
+.symbol-caption h4 {
+  color: #8b0000;
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 0.5rem;
+}
+
+.symbol-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(139, 0, 0, 0.7);
+  border: 2px solid #d4af37;
+  color: #f0e6c2;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.symbol-btn:hover {
+  background-color: rgba(178, 34, 34, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.symbol-btn.prev {
+  left: 20px;
+}
+
+.symbol-btn.next {
+  right: 20px;
+}
+
+.symbols-counter {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #3a1d0f;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.current-symbol {
+  color: #8b0000;
+}
+
+.total-symbols {
+  color: #5a2d18;
+}
+/* Slider de símbolos cristianos mejorado */
+.symbols-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3);
+}
+
+.symbol-slide {
+  display: none;
+}
+
+.symbol-slide.active {
+  display: block;
+  animation: fade 1s ease;
+}
+
+.symbol-img-container {
+  position: relative;
+  padding: 10px;
+  background: linear-gradient(145deg, #8b0000, #5a2d18);
+  margin: 0 auto;
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.symbol-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+  border: 2px solid #d4af37;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.symbol-caption {
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, #f8f4e8, #e8e0c0);
+  color: #3a1d0f;
+  margin: 0 10px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #d4af37;
+  border-top: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de marco decorativo */
+.symbol-img-container::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid rgba(212, 175, 55, 0.7);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Botones de navegación mejorados */
+.symbol-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(139, 0, 0, 0.8);
+  border: 2px solid #d4af37;
+  color: #f0e6c2;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.symbol-btn:hover {
+  background: rgba(178, 34, 34, 0.9);
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Contador mejorado */
+.symbols-counter {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #3a1d0f;
+  margin-top: 1rem;
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.current-symbol {
+  color: #8b0000;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.total-symbols {
+  color: #5a2d18;
+  font-weight: bold;
+}
+
+/* Adaptación para modo oscuro en otras secciones */
+.religion .symbol-img-container {
+  background: linear-gradient(145deg, #8b0000, #3a1d0f);
+}
+
+.religion .symbol-caption {
+  background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+}
