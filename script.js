@@ -184,3 +184,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Añadir al final del script.js
+document.getElementById('questionsBtn').addEventListener('click', function() {
+  const questionsList = document.getElementById('questionsList');
+  const isHidden = questionsList.classList.contains('hidden');
+  
+  // Toggle para mostrar/ocultar
+  questionsList.classList.toggle('hidden');
+  
+  // Añadir clase adicional para la animación
+  if (isHidden) {
+    setTimeout(() => {
+      questionsList.classList.add('show');
+      questionsList.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 10);
+  } else {
+    questionsList.classList.remove('show');
+  }
+  
+  // Cambiar texto del botón
+  this.textContent = isHidden ? 'Ocultar Preguntas' : 'Preguntas para Reflexión';
+  
+  // Efecto de click
+  this.classList.add('clicked');
+  setTimeout(() => {
+    this.classList.remove('clicked');
+  }, 200);
+});
