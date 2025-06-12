@@ -29,7 +29,7 @@
         <span class="btn-icon">&#8594;</span>
       </a>
       <div id="imgExtra" class="hidden">
-        <img src="arthurs_journal.jpg" alt="Páginas del diario de Arthur Morgan mostrando su evolución" />
+        <img src="images/arthurs_journal.jpg" alt="Páginas del diario de Arthur Morgan mostrando su evolución" />
         <p class="image-caption">El diario de Arthur revela su transformación interna a través de sus dibujos y reflexiones.</p>
       </div>
     </section>
@@ -38,10 +38,10 @@
       <h2>El Viaje de Arthur en Imágenes</h2>
       <div class="slide-container">
         <button class="slide-btn prev">&#10094;</button>
-        <img src="https://github.com/JavierBDavila/Filosofia/blob/main/Filosofia/arthur_reflection.jpg" alt="Arthur reflexionando al atardecer" class="slide active" />
-        <img src="https://github.com/JavierBDavila/Filosofia/blob/main/Filosofia/arthur_helping.jpg" alt="Arthur ayudando a construir una casa" class="slide" />
-        <img src="https://github.com/JavierBDavila/Filosofia/blob/main/arthur_final_ride.jpg?raw=true" alt="El último viaje de Arthur" class="slide" />
-        <img src="https://github.com/JavierBDavila/Filosofia/blob/main/Filosofia/arthur_sunset.jpg" alt="Arthur contemplando el atardecer" class="slide" />
+        <img src="images/arthur_reflection.jpg" alt="Arthur reflexionando al atardecer" class="slide active" />
+        <img src="images/arthur_helping.jpg" alt="Arthur ayudando a construir una casa" class="slide" />
+        <img src="images/arthur_final_ride.jpg" alt="El último viaje de Arthur" class="slide" />
+        <img src="images/arthur_sunset.jpg" alt="Arthur contemplando el atardecer" class="slide" />
         <button class="slide-btn next">&#10095;</button>
       </div>
       <div class="slide-caption">
@@ -124,48 +124,76 @@
           </ul>
         </div>
       </div>
-      <!-- Reemplazar la sección del botón y imagen oculta por este nuevo slider -->
-<section class="religion">
-  <h2>Redención en la Palabra de Dios</h2>
-   La Biblia presenta la redención como un acto de amor divino: 
-    <em>"En él tenemos redención por su sangre, el perdón de nuestros pecados, según las riquezas de su gracia"</em> (Efesios 1:7). 
-    A diferencia del camino solitario de Arthur, la redención cristiana es un regalo gratuito.
 
-  <h3>Símbolos de Redención Cristiana</h3>
-  <div class="symbols-slider">
-    <button class="symbol-btn prev">&#10094;</button>
-    
-    <div class="symbol-slide active">
-      <img src="https://github.com/JavierBDavila/Filosofia/blob/main/Filosofia/cruz.jpg" alt="La Cruz como símbolo de redención" />
-      <div class="symbol-caption">
-        <h4>La Cruz</h4>
-        <p>Representa el sacrificio supremo de Jesús, donde derramó su sangre para la redención de la humanidad. "Porque la palabra de la cruz es locura a los que se pierden; pero a los que se salvan, es poder de Dios" (1 Corintios 1:18).</p>
+      <h3>Símbolos de Redención Cristiana</h3>
+      <div class="symbols-slider">
+        <button class="symbol-btn prev">&#10094;</button>
+        
+        <div class="symbol-slide active">
+          <img src="images/cruz.jpg" alt="La Cruz como símbolo de redención" />
+          <div class="symbol-caption">
+            <h4>La Cruz</h4>
+            <p>Representa el sacrificio supremo de Jesús, donde derramó su sangre para la redención de la humanidad. "Porque la palabra de la cruz es locura a los que se pierden; pero a los que se salvan, es poder de Dios" (1 Corintios 1:18).</p>
+          </div>
+        </div>
+        
+        <div class="symbol-slide">
+          <img src="images/cordero.jpg" alt="El Cordero de Dios" />
+          <div class="symbol-caption">
+            <h4>El Cordero de Dios</h4>
+            <p>Jesús como el Cordero sin mancha que quita el pecado del mundo. "He aquí el Cordero de Dios, que quita el pecado del mundo" (Juan 1:29). Simboliza la inocencia y el sacrificio redentor.</p>
+          </div>
+        </div>
+        
+        <div class="symbol-slide">
+          <img src="images/pan-vino.jpg" alt="Pan y vino de la Santa Cena" />
+          <div class="symbol-caption">
+            <h4>Pan y Vino</h4>
+            <p>Representan el cuerpo y la sangre de Cristo, dados para la remisión de pecados. "Esto es mi sangre del nuevo pacto, que por muchos es derramada para remisión de los pecados" (Mateo 26:28).</p>
+          </div>
+        </div>
+        
+        <button class="symbol-btn next">&#10095;</button>
       </div>
-    </div>
-    
-    <div class="symbol-slide">
-      <img src="https://github.com/JavierBDavila/Filosofia/blob/main/Filosofia/cordero.jpg" alt="El Cordero de Dios" />
-      <div class="symbol-caption">
-        <h4>El Cordero de Dios</h4>
-        <p>Jesús como el Cordero sin mancha que quita el pecado del mundo. "He aquí el Cordero de Dios, que quita el pecado del mundo" (Juan 1:29). Simboliza la inocencia y el sacrificio redentor.</p>
+      
+      <div class="symbols-counter">
+        <span class="current-symbol">1</span> / <span class="total-symbols">3</span>
       </div>
-    </div>
-    
-    <div class="symbol-slide">
-      <img src="https://github.com/JavierBDavila/Filosofia/blob/main/Filosofia/pan-vino.jpg" alt="Pan y vino de la Santa Cena" />
-      <div class="symbol-caption">
-        <h4>Pan y Vino</h4>
-        <p>Representan el cuerpo y la sangre de Cristo, dados para la remisión de pecados. "Esto es mi sangre del nuevo pacto, que por muchos es derramada para remisión de los pecados" (Mateo 26:28).</p>
+    </section>
+
+    <!-- Sección de Preguntas para Reflexión -->
+    <section class="questions-section">
+      <button id="questionsBtn" class="questions-btn">Preguntas para Reflexión</button>
+      <div id="questionsList" class="questions-list hidden">
+        <h3>Preguntas sobre tu camino de redención:</h3>
+        <ol>
+          <li>¿Qué errores de tu pasado te pesan más y cómo podrías comenzar a enmendarlos?</li>
+          <li>¿Has perdonado realmente a quienes te han lastimado, o todavía guardas rencor?</li>
+          <li>Si hoy fuera tu último día, ¿qué te gustaría haber hecho diferente en tu vida?</li>
+          <li>¿Qué aspectos de tu carácter necesitas trabajar para ser mejor persona?</li>
+          <li>¿Has pedido perdón a quienes has lastimado, o solo esperas ser perdonado?</li>
+          <li>¿Qué legado quieres dejar y qué estás haciendo actualmente para lograrlo?</li>
+          <li>¿Qué sacrificios estás dispuesto a hacer por tu propia redención y crecimiento?</li>
+        </ol>
+        <p class="reflection-text">"Examinaos a vosotros mismos" (2 Corintios 13:5)</p>
       </div>
-    </div>
-    
-    <button class="symbol-btn next">&#10095;</button>
-  </div>
-  
-  <div class="symbols-counter">
-    <span class="current-symbol">1</span> / <span class="total-symbols">3</span>
-  </div>
-</section>
+    </section>
+
+    <section class="conclusion">
+      <h2>El Significado Universal de la Redención</h2>
+      <p>
+        Tanto en la narrativa de Red Dead Redemption 2 como en las enseñanzas cristianas, la redención representa la esperanza de que ningún error es demasiado grande para ser superado, y que incluso las vidas más manchadas pueden encontrar significado y paz en el arrepentimiento y el perdón.
+      </p>
+      <p>
+        La historia de Arthur Morgan nos recuerda que la redención no siempre viene de fuentes externas, sino que a menudo comienza con la valentía de enfrentar nuestros propios demonios y hacer las paces con nosotros mismos y con aquellos a quienes hemos lastimado.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 El Camino de la Redención | Inspirado por Red Dead Redemption 2 y la Teología Cristiana</p>
+    <p class="disclaimer">Este sitio es un análisis filosófico y no está afiliado a Rockstar Games ni a ninguna institución religiosa.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
